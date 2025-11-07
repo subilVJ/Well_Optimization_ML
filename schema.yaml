@@ -1,1 +1,51 @@
-key: value
+COLUMNS:
+  well_id : int64
+  permeability_md : float64
+  porosity_fraction  :  float64
+  net_to_gross   :  float64
+  thickness_ft              : float64
+  well_depth_ft              : float64
+  tubing_diameter_in        : float64
+  choke_size_64th            : float64
+  well_type                 :  object
+  completion_type            : object
+  artificial_lift            : object
+  reservoir_pressure_psi    : float64
+  reservoir_temp_f          : float64
+  bottomhole_pressure_psi   : float64
+  wellhead_pressure_psi     : float64
+  oil_gravity_api           : float64
+  gas_oil_ratio_scf_bbl     : float64
+  water_cut_fraction        : float64
+  fvf_oil                   : float64
+  oil_viscosity_cp          : float64
+  oil_rate_bbl_day          : float64
+  gas_rate_scf_day          : float64
+  water_rate_bbl_day        : float64
+  productivity_index        : float64
+  oil_price_usd_bbl         : float64
+  gas_price_usd_mcf         : float64
+  daily_opex_usd            : float64
+  drilling_cost_usd         : float64
+  completion_cost_usd       : float64
+  total_capex_usd           : float64
+  daily_revenue_usd         : float64
+  performance_index         : float64
+  oil_cut                   : float64
+  profit_per_barrel         : float64
+  production_efficiency     : float64
+  economic_efficiency       : float64
+  ranking_score             : float64
+  drill_date                :  object
+  well_age_days              :  int64
+  production_months         : float64
+  days_since_workover       : float64
+  pressure_drawdown         : float64
+  total_liquid_rate         : float64
+  productivity_factor       : float64
+  depth_category            :  object
+
+
+  TARGET_COLUMNS:
+   name: performance_index
+  
