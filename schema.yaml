@@ -46,6 +46,6 @@ COLUMNS:
   depth_category            :  object
 
 
-  TARGET_COLUMNS:
-   name: performance_index
+TARGET_COLUMNS:
+  name: performance_index
   
