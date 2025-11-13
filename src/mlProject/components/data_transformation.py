@@ -63,6 +63,39 @@ class DataTransfromation:
         except Exception as e:
             raise e
 
+    def get_data_transformation(self):
+        try:
+            numerical_fetures=['permeability_md', 'porosity_fraction', 'net_to_gross', 'thickness_ft',
+       'well_depth_ft', 'tubing_diameter_in', 'choke_size_64th',
+       'reservoir_pressure_psi', 'reservoir_temp_f', 'bottomhole_pressure_psi',
+       'wellhead_pressure_psi', 'oil_gravity_api', 'gas_oil_ratio_scf_bbl',
+       'water_cut_fraction', 'fvf_oil', 'oil_viscosity_cp', 'oil_rate_bbl_day',
+       'gas_rate_scf_day', 'water_rate_bbl_day', 'productivity_index',
+       'oil_price_usd_bbl', 'gas_price_usd_mcf', 'daily_opex_usd',
+       'drilling_cost_usd', 'completion_cost_usd', 'total_capex_usd',
+       'daily_revenue_usd', 'oil_cut', 'profit_per_barrel',
+       'production_efficiency', 'economic_efficiency', 'ranking_score',
+       'well_age_days', 'production_months', 'days_since_workover',
+       'pressure_drawdown', 'total_liquid_rate', 'productivity_factor']
+            
+            cat_features=['well_type', 'completion_type', 'artificial_lift',
+       'depth_category']
+            logger.info(f"Numerical Features {numerical_fetures}")
+            logger.info(f"Categorical Features { cat_features}")
+
+
+            num_transformer=StandardScaler()
+            oh_transformer=OneHotEncoder()
+
+            preprocessor=ColumnTransformer([
+                ("OneHotEncoder",oh_transformer,cat_features),
+                ("StandardScaler",num_transformer,numerical_fetures)
+            ])
+
+            return preprocessor
+        except Exception as e:
+            raise e
+
     def intiate_data_transfromation(self):
         try:
             train_df=pd.read_csv(self.config.train_data_path)

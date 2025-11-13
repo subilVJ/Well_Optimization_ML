@@ -22,4 +22,14 @@ class DataTransformationConfig:
     data_path: Path
     train_data_path: Path
     test_data_path : Path
+    train_model_data: Path
+    test_model_data: Path
     preprocessor_obj_file_path: Path
+
+@dataclass
+class ModelTrainerConfig:
+    root_dir: Path
+    train_data_path: Path
+    test_data_path: Path
+    model_name : str
+    target_column: str
