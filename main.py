@@ -49,6 +49,15 @@ except Exception as e:
     raise e
 
 
+STAGE_NAME_4="Model Evaluation Model"
+try:
+    logger.info(f">>>>>>>>>>> stage {STAGE_NAME_4}  started <<<<<<<<<<<")
+    data_evaluation=ModelTrainerTrainingPipeline()
+    data_evaluation.main()
+    logger.info(f">>>>>>>>>>> stage {STAGE_NAME_4} completed <<<<<<<<<<<")
+except Exception as e:
+    raise e
+
 
 
 

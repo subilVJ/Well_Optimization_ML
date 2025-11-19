@@ -13,3 +13,18 @@
  9. update the app.py
 
 well optimization/README.md
+
+
+https://dagshub.com/subilVJ/Well_Optimization_ML.mlflow
+
+
+import dagshub
+dagshub.init(repo_owner='subilVJ', repo_name='Well_Optimization_ML', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
+
+
+  9445f026b81bde037b36dd2c0eaf1eccc269e6ac
